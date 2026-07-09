@@ -1,5 +1,5 @@
 import { contact } from "@/content/portfolio";
-import { MailIcon, GitHubIcon, LinkedInIcon } from "@/components/Icons";
+import { MailIcon, GitHubIcon, LinkedInIcon, DownloadIcon } from "@/components/Icons";
 import PhoneLink from "@/components/PhoneLink";
 
 export default function Footer() {
@@ -39,7 +39,14 @@ export default function Footer() {
             <GitHubIcon />
             GitHub
           </a>
-          {/* TODO: add CV download when a hosted CV URL is available */}
+          <a
+            href="/cv.pdf"
+            download="Sudasun_Malaviarachchi_Senior_Quality_Assurance_Engineer_Resume.pdf"
+            className="inline-flex items-center gap-2 rounded-lg border border-white/15 px-7 py-3 text-sm font-semibold text-slate-200 transition-colors hover:border-sky-400/50 hover:text-white"
+          >
+            <DownloadIcon />
+            Download CV
+          </a>
         </div>
         <p className="mt-10 text-[13px] text-slate-500">
           Sanitized report samples and further artifacts available on request.

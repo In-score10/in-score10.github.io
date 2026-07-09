@@ -1,5 +1,5 @@
 import { contact } from "@/content/portfolio";
-import { MailIcon, GitHubIcon, LinkedInIcon } from "@/components/Icons";
+import { MailIcon, GitHubIcon, LinkedInIcon, DownloadIcon } from "@/components/Icons";
 
 export default function Hero() {
   return (
@@ -63,7 +63,14 @@ export default function Hero() {
             <GitHubIcon />
             GitHub
           </a>
-          {/* TODO: add CV download button when a hosted CV URL is available */}
+          <a
+            href="/cv.pdf"
+            download="Sudasun_Malaviarachchi_Senior_Quality_Assurance_Engineer_Resume.pdf"
+            className="inline-flex items-center gap-2 rounded-lg border border-white/15 px-6 py-3 text-sm font-semibold text-slate-200 transition-colors hover:border-sky-400/50 hover:text-white"
+          >
+            <DownloadIcon />
+            Download CV
+          </a>
         </div>
       </div>
     </header>
