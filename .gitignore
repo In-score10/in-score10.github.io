@@ -1,0 +1,10 @@
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+next-env.d.ts
+.env*
+
+# Internal working notes and the pre-Next.js prototype — not for the public repo
+PORTFOLIO.md
+legacy/
