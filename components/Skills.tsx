@@ -1,6 +1,7 @@
 import { skillGroups, signalLabel, type Signal } from "@/content/portfolio";
 import Reveal from "@/components/Reveal";
 import SectionHeading from "@/components/SectionHeading";
+import Tools from "@/components/Tools";
 
 const pillStyles: Record<Signal, string> = {
   applied: "border-emerald-400/30 bg-emerald-400/10 text-emerald-300",
@@ -20,6 +21,7 @@ export default function Skills() {
           <strong className="text-slate-300">Foundational</strong>: trained/exposed, not yet a
           headline claim.
         </p>
+        <Tools />
         <div className="grid gap-6 md:grid-cols-2">
           {skillGroups.map((group, i) => (
             <Reveal key={group.title} delay={(i % 2) * 80}>

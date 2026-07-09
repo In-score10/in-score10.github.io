@@ -1,22 +1,40 @@
 import { contact } from "@/content/portfolio";
 import { MailIcon, GitHubIcon, LinkedInIcon, DownloadIcon } from "@/components/Icons";
+import Terminal from "@/components/Terminal";
+import Typewriter from "@/components/Typewriter";
 
 export default function Hero() {
   return (
     <header id="top" className="hero-bg relative overflow-hidden">
-      <div className="mx-auto max-w-6xl px-5 pb-20 pt-36 sm:pt-44">
-        <p className="mb-5 inline-flex items-center gap-2 rounded-full border border-sky-400/25 bg-sky-400/10 px-4 py-1.5 font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-sky-300">
-          <span className="h-1.5 w-1.5 rounded-full bg-sky-400" aria-hidden />
+      <div
+        aria-hidden
+        className="hero-blob left-[8%] top-[12%] h-72 w-72 bg-sky-500/25"
+      />
+      <div
+        aria-hidden
+        className="hero-blob right-[6%] top-[38%] h-80 w-80 bg-indigo-500/20"
+        style={{ animationDelay: "-8s" }}
+      />
+      <div className="relative mx-auto grid max-w-6xl items-center gap-12 px-5 pb-20 pt-36 sm:pt-44 lg:grid-cols-[1fr_26rem]">
+        <div>
+        <p className="animate-in mb-5 inline-flex items-center gap-2 rounded-full border border-sky-400/25 bg-sky-400/10 px-4 py-1.5 font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-sky-300">
+          <span className="relative flex h-1.5 w-1.5" aria-hidden>
+            <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75 motion-reduce:hidden" />
+            <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-sky-400" />
+          </span>
           Senior QA Engineer · FinTech · Security Testing &amp; Test Automation
         </p>
-        <p className="font-mono text-base text-slate-400">Hello, I&rsquo;m</p>
-        <h1 className="font-display mt-1 max-w-4xl text-5xl font-bold leading-[1.05] tracking-tight sm:text-7xl">
-          <span className="text-gradient">Sudasun Malaviarachchi</span>
+        <p className="animate-in delay-1 font-mono text-base text-slate-400">Hello, I&rsquo;m</p>
+        <h1 className="animate-in delay-2 font-display mt-1 max-w-4xl text-5xl font-bold leading-[1.05] tracking-tight sm:text-7xl">
+          <span className="text-gradient text-gradient-x">Sudasun Malaviarachchi</span>
         </h1>
-        <p className="font-display mt-6 max-w-3xl text-2xl font-semibold leading-snug text-white sm:text-3xl">
+        <div className="animate-in delay-3">
+          <Typewriter />
+        </div>
+        <p className="animate-in delay-3 font-display mt-5 max-w-3xl text-2xl font-semibold leading-snug text-white sm:text-3xl">
           I find the defects that matter — and kill the noise that doesn&rsquo;t.
         </p>
-        <p className="mt-7 max-w-2xl text-lg leading-relaxed text-slate-300">
+        <p className="animate-in delay-4 mt-7 max-w-2xl text-lg leading-relaxed text-slate-300">
           I treat test results as claims to be verified, not findings to be
           forwarded. My specialty is the unglamorous middle of security and
           quality work: authenticated DAST scans, black-box output reconciled
@@ -24,7 +42,7 @@ export default function Hero() {
           so the report a team receives contains only defects that are real,
           reproducible, and ranked by actual risk.
         </p>
-        <p className="mt-4 max-w-2xl text-base leading-relaxed text-slate-400">
+        <p className="animate-in delay-4 mt-4 max-w-2xl text-base leading-relaxed text-slate-400">
           A tester checks the build; a quality assurance engineer assures the
           whole development lifecycle. Currently a Senior QA Engineer in FinTech,
           I build test automation
@@ -35,7 +53,7 @@ export default function Hero() {
           technical reporting that turns messy scanner output into
           decision-ready deliverables.
         </p>
-        <div className="mt-9 flex flex-wrap gap-3">
+        <div className="animate-in delay-5 mt-9 flex flex-wrap gap-3">
           <a
             href={`mailto:${contact.email}`}
             className="inline-flex items-center gap-2 rounded-lg bg-sky-500 px-6 py-3 text-sm font-semibold text-slate-950 transition-colors hover:bg-sky-400"
@@ -75,6 +93,10 @@ export default function Hero() {
             <DownloadIcon />
             Download CV
           </a>
+        </div>
+        </div>
+        <div className="animate-in delay-5 w-full justify-self-center lg:justify-self-end">
+          <Terminal />
         </div>
       </div>
     </header>

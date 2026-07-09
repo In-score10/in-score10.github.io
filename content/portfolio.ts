@@ -187,7 +187,7 @@ export const skillGroups: SkillGroup[] = [
       {
         name: "Agentic AI in QA workflows (test design, coverage analysis, maintenance)",
         signal: "applied",
-        evidence: "Core of day-to-day QA practice at Modernie (FinTech)",
+        evidence: "Claude Code, Cursor, Google Antigravity — daily QA practice at Modernie (FinTech)",
       },
       {
         name: "Performance / load & stress testing (Apache JMeter)",
@@ -267,13 +267,13 @@ export const experience: Role[] = [
     dates: "Apr 2024 – Apr 2026",
     role: "Software QA Engineer",
     detail:
-      "IFS Cloud, Emissions Management module. Integration test automation (TAR), UI automation (Katalon), REST API validation.",
+      "IFS — Emissions Management module of IFS Cloud. Integration test automation (TAR), UI automation (Katalon), REST API validation.",
   },
   {
     dates: "Mar 2023 – Apr 2024",
     role: "Associate Software Engineer – QA",
     detail:
-      "appiGo (Retailer, Pay, Rush, Restohub), Applova (POS + e-commerce), and a CPaaS platform. Functional, regression, API, and end-to-end testing; Selenium + Cucumber automation.",
+      "hSenid Mobile Solutions — appiGo (Retailer, Pay, Rush, Restohub), Applova (POS + e-commerce), and a CPaaS platform. Functional, regression, API, and end-to-end testing; Selenium + Cucumber automation.",
   },
 ];
 
