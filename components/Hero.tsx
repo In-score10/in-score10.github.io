@@ -9,9 +9,13 @@ export default function Hero() {
           <span className="h-1.5 w-1.5 rounded-full bg-sky-400" aria-hidden />
           Senior QA Engineer · FinTech · Security Testing &amp; Test Automation
         </p>
-        <h1 className="font-display max-w-4xl text-4xl font-bold leading-[1.08] tracking-tight text-white sm:text-6xl">
-          I find the defects that matter — <span className="text-gradient">and kill the noise that doesn&rsquo;t.</span>
+        <p className="font-mono text-base text-slate-400">Hello, I&rsquo;m</p>
+        <h1 className="font-display mt-1 max-w-4xl text-5xl font-bold leading-[1.05] tracking-tight sm:text-7xl">
+          <span className="text-gradient">Sudasun Malaviarachchi</span>
         </h1>
+        <p className="font-display mt-6 max-w-3xl text-2xl font-semibold leading-snug text-white sm:text-3xl">
+          I find the defects that matter — and kill the noise that doesn&rsquo;t.
+        </p>
         <p className="mt-7 max-w-2xl text-lg leading-relaxed text-slate-300">
           I treat test results as claims to be verified, not findings to be
           forwarded. My specialty is the unglamorous middle of security and
