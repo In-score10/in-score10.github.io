@@ -29,12 +29,12 @@ export default function Hero() {
         <h1 className="animate-in delay-2 font-display mt-1 max-w-4xl text-[2.35rem] font-bold leading-[1.05] tracking-tight sm:text-6xl lg:text-7xl">
           <span className="text-gradient text-gradient-x">Sudasun Malaviarachchi</span>
         </h1>
-        {/* Mobile-only portrait flip card, right after the name; desktop shows it in the right column */}
-        <div className="animate-in delay-3 mt-5 lg:hidden">
-          <PortraitCard />
-        </div>
         <div className="animate-in delay-3 mt-5">
           <Typewriter />
+        </div>
+        {/* Mobile-only portrait flip card; desktop shows it in the right column */}
+        <div className="animate-in delay-3 mt-6 lg:hidden">
+          <PortraitCard />
         </div>
         <p className="animate-in delay-3 font-display mt-5 max-w-3xl text-xl font-semibold leading-snug text-white sm:text-3xl">
           I find the defects that matter — and kill the noise that doesn&rsquo;t.
