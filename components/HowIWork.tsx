@@ -11,7 +11,9 @@ export default function HowIWork() {
           <Reveal
             key={p.title}
             delay={(i % 2) * 80}
-            className={i === 0 ? "md:col-span-2" : ""}
+            className={
+              i === 0 || i === principles.length - 1 ? "md:col-span-2" : ""
+            }
           >
             <div
               className={`card-lift h-full rounded-2xl border bg-white/[0.03] p-7 ${

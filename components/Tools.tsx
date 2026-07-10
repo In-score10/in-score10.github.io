@@ -14,6 +14,7 @@ const tools = [
   { name: "Claude Code", src: "/logos/tools/claudecode.svg" },
   { name: "Cursor", src: "/logos/tools/cursor.svg" },
   { name: "Antigravity", src: "/logos/tools/antigravity.png" },
+  { name: "Testsigma", src: "/logos/tools/testsigma.svg" },
 ];
 
 export default function Tools() {

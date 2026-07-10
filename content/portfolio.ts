@@ -51,7 +51,7 @@ export const caseStudies: CaseStudy[] = [
     title: "Standing Up Test Automation from Zero: a Playwright Framework for a FinTech Platform",
     diagram: "framework",
     situation:
-      "DigiApp is a workforce-management platform built for CDB, a FinTech customer — a domain where employee PII and compliance expectations raise the cost of every defect — and it had no test automation framework. As Senior QA Engineer at Modernie Business Solutions, I owned building that capability from scratch, on the same platform whose security posture I test (next case study).",
+      "DigiApp is a workforce-management platform built for CDB, a FinTech customer — a domain where employee PII and compliance expectations raise the cost of every defect — and it had no test automation framework. As Senior QA Engineer at Modernie Business Solutions, I owned building that capability from scratch, on the same platform whose security posture I test (next project).",
     approach:
       "I designed and built the automation framework end-to-end on Playwright and TypeScript with a Cucumber BDD layer, so scenarios read as business-legible specifications while executing as fast, reliable browser automation. I fold agentic AI into day-to-day QA work — test design, coverage analysis, and suite maintenance — and complement functional automation with Apache JMeter load/stress testing and a security-aware testing lens appropriate to the FinTech domain.",
     result:
@@ -74,7 +74,7 @@ export const caseStudies: CaseStudy[] = [
     situation:
       "IFS Cloud's Emissions Management module is an enterprise sustainability product shipping on a demanding cadence — 3+ major releases and 12+ service updates during my tenure — with a cross-functional team of 20+ engineers.",
     approach:
-      "I led integration test automation using TAR and built UI automation in Katalon, alongside REST API validation covering the module's service layer. Testing was mixed manual + automated, with defects managed end-to-end through Jira + Xray so that every release carried a traceable quality record.",
+      "I led integration test automation using TAR and built UI automation in Katalon, alongside REST API validation covering the module's service layer. Testing was mixed manual + automated, with defects managed end-to-end through Jira + Xray so that every release carried a traceable quality record. I also initiated the team's adoption of AI-driven test automation — working hands-on with Kane AI and Testsigma to automate test scenarios, and sharing insights that influenced project-level automation strategy and tooling direction.",
     result:
       "400+ defects identified and tracked to a 95% resolution rate across the release train — quality signal delivered consistently across every major release and service update rather than in one-off pushes.",
   },
@@ -108,17 +108,43 @@ export interface Skill {
 
 export interface SkillGroup {
   title: string;
+  featured?: boolean;
   skills: Skill[];
 }
 
 export const skillGroups: SkillGroup[] = [
+  {
+    title: "Test Automation & API Validation",
+    featured: true,
+    skills: [
+      {
+        name: "Automation framework design from scratch (page objects, BDD layers, CI-ready)",
+        signal: "applied",
+        evidence: "CDB DigiApp framework — architecture, conventions & tooling all mine",
+      },
+      {
+        name: "Playwright + TypeScript",
+        signal: "applied",
+        evidence: "CDB DigiApp automation framework — Modernie (FinTech)",
+      },
+      {
+        name: "Cucumber BDD",
+        signal: "applied",
+        evidence: "BDD layer of the CDB DigiApp framework; earlier Selenium + Cucumber suites",
+      },
+      { name: "Katalon (UI automation)", signal: "applied", evidence: "IFS Cloud – Emissions Management" },
+      { name: "TAR (integration test automation)", signal: "applied", evidence: "Led integration automation on IFS Cloud" },
+      { name: "Selenium + Cucumber with Java (BDD UI automation)", signal: "applied", evidence: "appiGo suite, CPaaS" },
+      { name: "REST API testing & validation", signal: "applied", evidence: "IFS Cloud, CPaaS backend/messaging validation" },
+    ],
+  },
   {
     title: "Security Testing",
     skills: [
       {
         name: "DAST with OWASP ZAP (authenticated, role-based scans)",
         signal: "applied",
-        evidence: "DigiApp engagement — Case Study 1",
+        evidence: "DigiApp — see Projects",
       },
       {
         name: "OWASP Top 10 / API Top 10 mapping (incl. BOLA)",
@@ -140,25 +166,6 @@ export const skillGroups: SkillGroup[] = [
         signal: "working",
         evidence: "Security-aware testing lens at Modernie (FinTech)",
       },
-    ],
-  },
-  {
-    title: "Test Automation & API Validation",
-    skills: [
-      {
-        name: "Playwright + TypeScript (framework design from scratch)",
-        signal: "applied",
-        evidence: "CDB DigiApp automation framework — Modernie (FinTech)",
-      },
-      {
-        name: "Cucumber BDD",
-        signal: "applied",
-        evidence: "BDD layer of the CDB DigiApp framework; earlier Selenium + Cucumber suites",
-      },
-      { name: "Katalon (UI automation)", signal: "applied", evidence: "IFS Cloud – Emissions Management" },
-      { name: "TAR (integration test automation)", signal: "applied", evidence: "Led integration automation on IFS Cloud" },
-      { name: "Selenium + Cucumber (BDD UI automation)", signal: "applied", evidence: "appiGo suite, CPaaS" },
-      { name: "REST API testing & validation", signal: "applied", evidence: "IFS Cloud, CPaaS backend/messaging validation" },
     ],
   },
   {
@@ -190,6 +197,11 @@ export const skillGroups: SkillGroup[] = [
         evidence: "Claude Code, Cursor, Google Antigravity — daily QA practice at Modernie (FinTech)",
       },
       {
+        name: "AI-driven test automation platforms (Kane AI, Testsigma)",
+        signal: "applied",
+        evidence: "Scenario automation at IFS; insights shaped project-level automation strategy",
+      },
+      {
         name: "Performance / load & stress testing (Apache JMeter)",
         signal: "working",
         evidence: "Load and stress profiles for FinTech workloads at Modernie",
@@ -202,7 +214,7 @@ export const skillGroups: SkillGroup[] = [
       {
         name: "Security reporting (dated, per-cycle regression reports)",
         signal: "applied",
-        evidence: "DigiApp report structure — Case Study 1",
+        evidence: "DigiApp report structure — see Projects",
       },
       {
         name: "Decision-ready deliverables from raw findings",
@@ -217,7 +229,11 @@ export const skillGroups: SkillGroup[] = [
       { name: "Git, CI/CD concepts", signal: "working", evidence: "Daily use across all roles" },
       { name: "Jenkins", signal: "foundational", evidence: "Basic pipeline exposure" },
       { name: "Linux", signal: "foundational" },
-      { name: "AWS", signal: "foundational" },
+      {
+        name: "AWS & test-environment management",
+        signal: "working",
+        evidence: "Manual build deployments to AWS servers, environment readiness & test data prep at hSenid Mobile",
+      },
     ],
   },
 ];
@@ -230,7 +246,19 @@ export interface Principle {
 export const principles: Principle[] = [
   {
     title: "Quality is assured across the lifecycle — not inspected in at the end.",
-    body: "Testing a deployed build is the last checkpoint, not the first. I get involved where defects are cheapest to prevent: reviewing requirements for testability, writing BDD scenarios that act as executable specifications before the code exists, wiring automation into the pipeline so every change is verified on its way in, and carrying security and performance concerns from design conversations through to dated post-deployment regression cycles.",
+    body: "My work starts in requirement analysis: sitting with product owners and developers to clarify business rules and calculation logic, validate acceptance criteria, and flag risk areas before a line of code exists. It doesn't end at release either — I validate coverage and risk before sign-off, communicate release readiness to stakeholders, and stay accountable for what ships: on the audit-critical emissions platform I covered as sole QA, internal users contacted me directly with post-release questions, and I owned the service-update tracks that followed each major release. Testing a deployed build is one checkpoint in the middle, not the job.",
+  },
+  {
+    title: "The best defect report is the one I never have to write.",
+    body: "I don't measure myself by defects found — honestly, I'm happiest when there are none to find, because it means the early work did its job: requirements clarified, risks flagged, developers aligned before the code existed. Prevention over detection; QA owns the quality of the process, not just the testing at the end of it. When defects do surface, they ship with clean reproduction steps, expected-vs-actual, severity, and business impact — then get root-caused with developers and locked down in regression so they never come back.",
+  },
+  {
+    title: "Risk decides what gets tested first.",
+    body: "Test strategy is proactive, not reactive — it takes domain knowledge, and I keep mine sharp. On a platform whose emission results feed compliance and audits, calculation accuracy, scope-based logic, and cross-module integrations carry the most risk, so they get the deepest coverage first. Execution then earns confidence in deliberate order: sanity on the fix, smoke on the build, regression on the business-critical flows, then the full end-to-end cycle.",
+  },
+  {
+    title: "See the feature the way the end user will.",
+    body: "Before designing a single test case, I mind-map the feature — functionality, UI elements, pass and fail paths — a habit I built at hSenid Mobile. It gives the whole team a visual of how a user will actually experience the feature, and it anchors my test design to the people we build for: functional flows, negative scenarios, edge cases, and integration points all traced from the user's view inward.",
   },
   {
     title: "A finding is a claim until it's reproduced.",
@@ -277,8 +305,74 @@ export const experience: Role[] = [
   },
 ];
 
+export interface Article {
+  title: string;
+  date: string;
+  url: string;
+  tag: string;
+}
+
+export const articles: Article[] = [
+  {
+    title: "Penetration Testing for QA Engineers: Understanding Security Beyond Functional Testing",
+    date: "Jun 2026",
+    url: "https://medium.com/p/8527689896b0",
+    tag: "Security",
+  },
+  {
+    title: "Playwright with MCP: The Future of Intelligent Test Automation",
+    date: "May 2026",
+    url: "https://medium.com/p/97b8d3139110",
+    tag: "AI × Automation",
+  },
+  {
+    title: "Test Automation: 10 Mistakes That Will Kill Your Framework (And How to Fix Them)",
+    date: "Apr 2026",
+    url: "https://medium.com/p/eba952fb49e7",
+    tag: "Automation",
+  },
+  {
+    title: "Shift Right Testing: Quality Beyond Pre-Production",
+    date: "Jun 2026",
+    url: "https://medium.com/p/6da4a0c10bde",
+    tag: "Strategy",
+  },
+  {
+    title: "Test Data Management: The Most Underrated Problem in Test Automation",
+    date: "May 2026",
+    url: "https://medium.com/p/6decb92238c4",
+    tag: "Automation",
+  },
+  {
+    title: "Shift Left Testing: Why Modern Teams Test Earlier",
+    date: "Mar 2026",
+    url: "https://medium.com/p/403656c77f56",
+    tag: "Strategy",
+  },
+];
+
+export interface Certification {
+  name: string;
+  issuer: string;
+  url: string;
+}
+
+export const certifications: Certification[] = [
+  {
+    name: "Claude Code 101",
+    issuer: "Anthropic",
+    url: "https://verify.skilljar.com/c/vyzpiqbm86xr",
+  },
+  {
+    name: "Introduction to Model Context Protocol",
+    issuer: "Anthropic",
+    url: "https://verify.skilljar.com/c/gdzbit5zak4z",
+  },
+];
+
 export const contact = {
   email: "mvirajsudasun@gmail.com",
+  medium: "https://medium.com/@mvirajsudasun",
   // Base64-encoded phone number, decoded client-side so it never appears
   // in the static HTML or as plain text in the bundle (see PhoneLink.tsx)
   phoneEncoded: "Kzk0IDc2IDczNiA0Nzk1",

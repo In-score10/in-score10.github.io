@@ -1,5 +1,5 @@
 import { contact } from "@/content/portfolio";
-import { MailIcon, GitHubIcon, LinkedInIcon, DownloadIcon } from "@/components/Icons";
+import { MailIcon, GitHubIcon, LinkedInIcon, MediumIcon, DownloadIcon } from "@/components/Icons";
 import PhoneLink from "@/components/PhoneLink";
 
 export default function Footer() {
@@ -10,7 +10,7 @@ export default function Footer() {
           Contact
         </p>
         <h2 className="font-display mx-auto max-w-2xl text-3xl font-bold tracking-tight text-white sm:text-4xl">
-          Looking for a QA engineer who verifies before reporting?
+          Looking for a QA engineer who prevents defects, not just finds them?
         </h2>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
           <a
@@ -38,6 +38,15 @@ export default function Footer() {
           >
             <GitHubIcon />
             GitHub
+          </a>
+          <a
+            href={contact.medium}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-lg border border-white/15 px-7 py-3 text-sm font-semibold text-slate-200 transition-colors hover:border-sky-400/50 hover:text-white"
+          >
+            <MediumIcon />
+            Medium
           </a>
           <a
             href="/cv.pdf"

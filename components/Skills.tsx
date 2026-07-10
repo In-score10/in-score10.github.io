@@ -24,12 +24,29 @@ export default function Skills() {
         <Tools />
         <div className="grid gap-6 md:grid-cols-2">
           {skillGroups.map((group, i) => (
-            <Reveal key={group.title} delay={(i % 2) * 80}>
-              <div className="card-lift h-full rounded-2xl border border-white/10 bg-white/[0.03] p-7">
-                <h3 className="font-display mb-5 text-lg font-bold text-white">
-                  {group.title}
-                </h3>
-                <ul className="space-y-4">
+            <Reveal
+              key={group.title}
+              delay={(i % 2) * 80}
+              className={group.featured ? "md:col-span-2" : ""}
+            >
+              <div
+                className={`card-lift h-full rounded-2xl border bg-white/[0.03] p-7 ${
+                  group.featured
+                    ? "border-sky-400/30 shadow-[0_0_60px_-20px_rgba(56,189,248,0.25)]"
+                    : "border-white/10"
+                }`}
+              >
+                <div className="mb-5 flex flex-wrap items-center gap-3">
+                  <h3 className="font-display text-lg font-bold text-white">
+                    {group.title}
+                  </h3>
+                  {group.featured && (
+                    <span className="rounded-full border border-sky-400/30 bg-sky-400/10 px-2.5 py-0.5 text-[11px] font-semibold text-sky-300">
+                      Core strength
+                    </span>
+                  )}
+                </div>
+                <ul className={group.featured ? "grid gap-4 md:grid-cols-2" : "space-y-4"}>
                   {group.skills.map((skill) => (
                     <li key={skill.name}>
                       <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1">

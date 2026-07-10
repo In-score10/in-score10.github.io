@@ -1,6 +1,7 @@
 import { contact } from "@/content/portfolio";
-import { MailIcon, GitHubIcon, LinkedInIcon, DownloadIcon } from "@/components/Icons";
+import { MailIcon, GitHubIcon, LinkedInIcon, MediumIcon, DownloadIcon } from "@/components/Icons";
 import Terminal from "@/components/Terminal";
+import PortraitCard from "@/components/PortraitCard";
 import Typewriter from "@/components/Typewriter";
 
 export default function Hero() {
@@ -62,10 +63,10 @@ export default function Hero() {
             Email me
           </a>
           <a
-            href="#case-studies"
+            href="#projects"
             className="inline-flex items-center gap-2 rounded-lg border border-white/15 px-6 py-3 text-sm font-semibold text-slate-200 transition-colors hover:border-sky-400/50 hover:text-white"
           >
-            View case studies
+            View projects
           </a>
           <a
             href={contact.linkedin}
@@ -86,6 +87,15 @@ export default function Hero() {
             GitHub
           </a>
           <a
+            href={contact.medium}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-lg border border-white/15 px-6 py-3 text-sm font-semibold text-slate-200 transition-colors hover:border-sky-400/50 hover:text-white"
+          >
+            <MediumIcon />
+            Medium
+          </a>
+          <a
             href="/cv.pdf"
             download="Sudasun_Malaviarachchi_Senior_Quality_Assurance_Engineer_Resume.pdf"
             className="inline-flex items-center gap-2 rounded-lg border border-white/15 px-6 py-3 text-sm font-semibold text-slate-200 transition-colors hover:border-sky-400/50 hover:text-white"
@@ -95,7 +105,8 @@ export default function Hero() {
           </a>
         </div>
         </div>
-        <div className="animate-in delay-5 w-full justify-self-center lg:justify-self-end">
+        <div className="animate-in delay-5 w-full max-w-md justify-self-center space-y-4 lg:justify-self-end">
+          <PortraitCard />
           <Terminal />
         </div>
       </div>

@@ -12,8 +12,8 @@ const stages = [
 
 export default function CaseStudies() {
   return (
-    <section id="case-studies" className="mx-auto max-w-6xl px-5 py-24">
-      <SectionHeading kicker="Selected work" title="Case Studies" />
+    <section id="projects" className="mx-auto max-w-6xl px-5 py-24">
+      <SectionHeading kicker="Selected work" title="Projects" />
       <div className="space-y-8">
         {caseStudies.map((cs, i) => (
           <Reveal key={cs.title}>
