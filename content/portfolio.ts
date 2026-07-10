@@ -293,7 +293,7 @@ export const experience: Role[] = [
   },
   {
     dates: "Apr 2024 – Apr 2026",
-    role: "Software QA Engineer",
+    role: "Software Engineer Quality Assurance",
     detail:
       "IFS — Emissions Management module of IFS Cloud. Integration test automation (TAR), UI automation (Katalon), REST API validation.",
   },
@@ -304,7 +304,7 @@ export const experience: Role[] = [
       "hSenid Mobile Solutions — appiGo (Retailer, Pay, Rush, Restohub), Applova (POS + e-commerce), and a CPaaS platform. Functional, regression, API, and end-to-end testing; Selenium + Cucumber automation.",
   },
   {
-    dates: "Oct 2022 – Apr 2023",
+    dates: "Oct 2022 – Mar 2023",
     role: "Trainee Quality Assurance Engineer",
     detail:
       "hSenid Mobile Solutions — internship where the fundamentals took root: test case design, structured execution, and defect reporting on production mobile and communications products. Promoted to Associate SE–QA at its close.",
