@@ -10,9 +10,24 @@ const grotesk = Space_Grotesk({ subsets: ["latin"], variable: "--font-grotesk" }
 const mono = JetBrains_Mono({ subsets: ["latin"], variable: "--font-jetbrains" });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://sudasunviraj.github.io"),
   title: "Sudasun Malaviarachchi — Senior QA Engineer · Security Testing & Test Automation",
   description:
     "Sudasun Malaviarachchi — Senior QA Engineer in FinTech specializing in security testing (DAST/OWASP ZAP), test automation frameworks (Playwright, TypeScript, Cucumber BDD), agentic-AI-assisted QA, and decision-ready technical reporting.",
+  openGraph: {
+    title: "Sudasun Malaviarachchi — Senior QA Engineer",
+    description:
+      "Security testing, test automation frameworks from scratch, and agentic AI in QA. I find the defects that matter — and kill the noise that doesn't.",
+    url: "https://sudasunviraj.github.io",
+    siteName: "Sudasun Malaviarachchi — Portfolio",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Sudasun Malaviarachchi — Senior QA Engineer",
+    description:
+      "Security testing, test automation frameworks from scratch, and agentic AI in QA.",
+  },
 };
 
 export default function RootLayout({
