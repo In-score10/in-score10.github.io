@@ -59,7 +59,7 @@ export default function Terminal() {
           qa@sudasun — regression cycle
         </span>
       </div>
-      <div className="min-h-[15.5rem] px-4 py-4 font-mono text-[12.5px] leading-[1.55]">
+      <div className="min-h-[15.5rem] px-4 py-4 font-mono text-[11px] leading-[1.55] sm:text-[12.5px]">
         {visible.map((l, i) => (
           <p key={i} className={l.cls}>
             {l.shown}
