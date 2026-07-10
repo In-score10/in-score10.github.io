@@ -1,6 +1,7 @@
 import Nav from "@/components/Nav";
 import ScrollProgress from "@/components/ScrollProgress";
 import Spotlight from "@/components/Spotlight";
+import BackToTop from "@/components/BackToTop";
 import Hero from "@/components/Hero";
 import ProofBar from "@/components/ProofBar";
 import Employers from "@/components/Employers";
@@ -30,6 +31,7 @@ export default function Home() {
         <Experience />
       </main>
       <Footer />
+      <BackToTop />
     </>
   );
 }
